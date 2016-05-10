@@ -9,6 +9,14 @@ describe('calculator', function () {
     }));
 
     describe('sum', function () {
+
+        beforeEach(function() {
+            this.addMatchers({
+                toBeFive: function() {
+                    return this.actual === 5;
+                }
+            })
+        });
         
         it('1 + 1 should equal 2', function () {
             var $scope = {};

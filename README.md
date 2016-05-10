@@ -42,9 +42,50 @@ karma start karma.conf.js
 
 ### Useful Karma commands
 
-
 ```shell
 // Run this or npm test which is less verbose
 karma start karma.conf.js
 npm test
+```
+
+### Built-in matchers (A.K.A expectations)
+
+```javascript
+// Very complex , checks if two objects or arrays or equal
+expect(x).toEqual(y);
+// x === y
+expect(x).toBe(y);
+// regular expression match
+expect(x).toMatch(y);
+// Checks if x is defined
+expect(x).toBeDefined(y);
+// Checks if x is undefined
+expect(x).toBeUndefined(y);
+// Checks if x === null
+expect(x).toBeNull(y);
+// Checks if x is truthy (https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+expect(x).toBeTruthy(y);
+// Checks if x is falsy (https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+expect(x).toBeFalsy(y);
+// Find items in array
+expect(x).toContain(y);
+// x < y
+expect(x).toBeLessThan(y);
+// x > y
+expect(x).toBeGreaterThan(y);
+// Pass callback and expect a particular expectation
+expect(function(){fn();}).toThrow(ex);
+// All of these can be negated
+expect(x).not.toEqual(y);
+expect(x).not.toBe(y);
+expect(x).not.toMatch(y);
+expect(x).not.toBeDefined(y);
+expect(x).not.toBeUndefined(y);
+expect(x).not.toBeNull(y);
+expect(x).not.toBeTruthy(y);
+expect(x).not.toBeFalsy(y);
+expect(x).not.toContain(y);
+expect(x).not.toBeLessThan(y);
+expect(x).not.toBeGreaterThan(y);
+expect(function(){fn();}).not.toThrow(ex);
 ```
