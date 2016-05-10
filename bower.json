@@ -1,0 +1,21 @@
+{
+  "name": "javascript-testing",
+  "homepage": "https://github.com/bitclaw/javascript-testing",
+  "authors": [
+    "Daniel C. <bitclaw@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine-core": "jasmine#^2.4.1"
+  }
+}
