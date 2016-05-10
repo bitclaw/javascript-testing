@@ -8,6 +8,7 @@ describe('calculator', function () {
         $controller = _$controller_;
     }));
 
+    // xdescribe to skip all tests in this block
     describe('sum', function () {
 
         beforeEach(function() {
@@ -30,7 +31,13 @@ describe('calculator', function () {
             expect($scope.z).toBe(3);
         });
 
-        it('z should have default value of zero', function () {
+        xit('z should have default value of zero', function () {
+            var $scope = {};
+            var controller = $controller('CalculatorController', { $scope: $scope });
+            expect($scope.z).toBe(0);
+        });
+
+        xit('should be skipped', function () {
             var $scope = {};
             var controller = $controller('CalculatorController', { $scope: $scope });
             expect($scope.z).toBe(0);
