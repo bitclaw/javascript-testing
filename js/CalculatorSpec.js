@@ -20,7 +20,7 @@ describe('calculator', function () {
     });
 
     it('should be able to divide a rational number', function () {
-        expect(calc.divide(1,3).toBeGreaterThan(0.3));
+        expect(calc.divide(1,3).toBeBetween(0.3, 0.34));
         expect(calc.divide(1,3).toBeLessThan(0.34));
     });
 
