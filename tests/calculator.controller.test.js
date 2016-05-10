@@ -13,11 +13,14 @@ describe('calculator', function () {
         beforeEach(function() {
             this.addMatchers({
                 toBeFive: function() {
+                    this.message = function() {
+                        return this.actual + " is not 5!";
+                    };
                     return this.actual === 5;
                 }
             })
         });
-        
+
         it('1 + 1 should equal 2', function () {
             var $scope = {};
             var controller = $controller('CalculatorController', { $scope: $scope });
@@ -32,7 +35,7 @@ describe('calculator', function () {
             var controller = $controller('CalculatorController', { $scope: $scope });
             expect($scope.z).toBe(0);
         });
-        
+
     });
 
 });
