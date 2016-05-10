@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "jasmine-core": "jasmine#^2.4.1",
     "angular": "^1.5.5"
   }
 }
